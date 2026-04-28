@@ -1,38 +1,38 @@
 id	parentId	type	text	options	target	signal
-START	null	start	Good evening. Let’s reflect on your day.			
+START	null	start	Good evening. Let’s reflect on your day.	null	null	null
 
-A1_Q1	START	question	How would you describe your day?	Productive|Tough|Mixed|Frustrating		
-A1_D1	A1_Q1	decision		answer=Productive|Mixed:A1_Q2_HIGH;answer=Tough|Frustrating:A1_Q2_LOW		
+A1_Q1	START	question	How would you describe your day?	Productive|Tough|Mixed|Frustrating	null	null
+A1_D1	A1_Q1	decision		answer=Productive|Mixed:A1_Q2_HIGH;answer=Tough|Frustrating:A1_Q2_LOW	null	null
 
-A1_Q2_HIGH	A1_D1	question	When things went well, what helped most?	My effort|Team support|Luck|Adaptation		
-A1_Q2_LOW	A1_D1	question	When things went wrong, what was your reaction?	Improve myself|Blame situation|Wait for help|Feel stuck		
+A1_Q2_HIGH	A1_D1	question	When things went well, what helped most?	My effort|Team support|Luck|Adaptation	null	null
+A1_Q2_LOW	A1_D1	question	When things went wrong, what was your reaction?	Improve myself|Blame situation|Wait for help|Feel stuck	null	null
 
-A1_D2	A1_Q2_HIGH	decision		answer=My effort|Adaptation:A1_R_INT;answer=Team support|Luck:A1_R_EXT		
-A1_D3	A1_Q2_LOW	decision		answer=Improve myself:A1_R_INT;answer=Blame situation|Wait for help|Feel stuck:A1_R_EXT		
+A1_D2	A1_Q2_HIGH	decision		answer=My effort|Adaptation:A1_R_INT;answer=Team support|Luck:A1_R_EXT	null	null
+A1_D3	A1_Q2_LOW	decision		answer=Improve myself:A1_R_INT;answer=Blame situation|Wait for help|Feel stuck:A1_R_EXT	null	null
 
-A1_R_INT	A1_D2	reflection	You showed ownership today. You took control of situations.			axis1:internal
-A1_R_EXT	A1_D3	reflection	Today felt influenced by external factors. But you still had choices.			axis1:external
+A1_R_INT	A1_D2	reflection	You showed ownership today. You took control of situations.	null	null	axis1:internal
+A1_R_EXT	A1_D3	reflection	Today felt influenced by external factors. But you still had choices.	null	null	axis1:external
 
-BRIDGE_1_2	A1_R_INT	bridge	Now let’s shift focus from control to contribution.		A2_Q1	
-BRIDGE_1_2B	A1_R_EXT	bridge	Now let’s shift focus from control to contribution.		A2_Q1	
+BRIDGE_1_2	A1_R_INT	bridge	Now let’s shift focus from control to contribution.	null	A2_Q1	null
+BRIDGE_1_2B	A1_R_EXT	bridge	Now let’s shift focus from control to contribution.	null	A2_Q1	null
 
-A2_Q1	BRIDGE_1_2	question	What best describes your contribution today?	Helped others|Did extra work|Expected recognition|Felt others didn’t contribute		
-A2_D1	A2_Q1	decision		answer=Helped others|Did extra work:A2_R_CON;answer=Expected recognition|Felt others didn’t contribute:A2_R_ENT		
+A2_Q1	BRIDGE_1_2	question	What best describes your contribution today?	Helped others|Did extra work|Expected recognition|Felt others didn’t contribute	null	null
+A2_D1	A2_Q1	decision		answer=Helped others|Did extra work:A2_R_CON;answer=Expected recognition|Felt others didn’t contribute:A2_R_ENT	null	null
 
-A2_R_CON	A2_D1	reflection	You contributed beyond expectations. That builds real value.			axis2:contribution
-A2_R_ENT	A2_D1	reflection	You noticed gaps in contribution. Reflect on what you could give more.			axis2:entitlement
+A2_R_CON	A2_D1	reflection	You contributed beyond expectations. That builds real value.	null	null	axis2:contribution
+A2_R_ENT	A2_D1	reflection	You noticed gaps in contribution. Reflect on what you could give more.	null	null	axis2:entitlement
 
-BRIDGE_2_3	A2_R_CON	bridge	Now let’s expand your perspective beyond yourself.		A3_Q1	
-BRIDGE_2_3B	A2_R_ENT	bridge	Now let’s expand your perspective beyond yourself.		A3_Q1	
+BRIDGE_2_3	A2_R_CON	bridge	Now let’s expand your perspective beyond yourself.	null	A3_Q1	null
+BRIDGE_2_3B	A2_R_ENT	bridge	Now let’s expand your perspective beyond yourself.	null	A3_Q1	null
 
-A3_Q1	BRIDGE_2_3	question	Who were you most focused on today?	Myself|My team|A colleague|Customer		
-A3_D1	A3_Q1	decision		answer=Myself:A3_R_SELF;answer=My team|A colleague|Customer:A3_R_ALT		
+A3_Q1	BRIDGE_2_3	question	Who were you most focused on today?	Myself|My team|A colleague|Customer	null	null
+A3_D1	A3_Q1	decision		answer=Myself:A3_R_SELF;answer=My team|A colleague|Customer:A3_R_ALT	null	null
 
-A3_R_SELF	A3_D1	reflection	Your focus was mainly on yourself. Expanding perspective can bring more meaning.			axis3:self
-A3_R_ALT	A3_D1	reflection	You considered others in your actions. That creates broader impact.			axis3:altro
+A3_R_SELF	A3_D1	reflection	Your focus was mainly on yourself. Expanding perspective can bring more meaning.	null	null	axis3:self
+A3_R_ALT	A3_D1	reflection	You considered others in your actions. That creates broader impact.	null	null	axis3:altro
 
 A3_Q2	A3_R_SELF	question	How did your actions impact others?	Not much|Somewhat|Significantly	null	null
-A3_Q3	A3_R_ALT	question	How did others benefit from your actions?	Support|Guidance|Results	null	null	
+A3_Q3	A3_R_ALT	question	How did others benefit from your actions?	Support|Guidance|Results	null	null
 
-SUMMARY	null	summary	Today you showed {axis1.dominant} control, {axis2.dominant} contribution, and {axis3.dominant} perspective.		
-END	SUMMARY	end	See you tomorrow.
+SUMMARY	null	summary	Today you showed {axis1.dominant} control, {axis2.dominant} contribution, and {axis3.dominant} perspective.	null	null	null
+END	SUMMARY	end	See you tomorrow.	null	null	null
