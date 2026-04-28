@@ -31,8 +31,8 @@ A3_D1	A3_Q1	decision		answer=Myself:A3_R_SELF;answer=My team|A colleague|Custome
 A3_R_SELF	A3_D1	reflection	Your focus was mainly on yourself. Expanding perspective can bring more meaning.			axis3:self
 A3_R_ALT	A3_D1	reflection	You considered others in your actions. That creates broader impact.			axis3:altro
 
-A3_Q2	A3_R_SELF	question	How did your actions impact others?	Not much|Somewhat|Significantly		
-A3_Q3	A3_R_ALT	question	How did others benefit from your actions?	Support|Guidance|Results		
+A3_Q2	A3_R_SELF	question	How did your actions impact others?	Not much|Somewhat|Significantly	null	null
+A3_Q3	A3_R_ALT	question	How did others benefit from your actions?	Support|Guidance|Results	null	null	
 
 SUMMARY	null	summary	Today you showed {axis1.dominant} control, {axis2.dominant} contribution, and {axis3.dominant} perspective.		
 END	SUMMARY	end	See you tomorrow.
